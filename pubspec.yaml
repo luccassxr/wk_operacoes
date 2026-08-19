@@ -1,0 +1,31 @@
+name: wk_operacoes
+description: MVP interno WK Operações para atendimento e fidelidade.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.15.2
+  firebase_auth: ^5.7.0
+  cloud_firestore: ^5.6.12
+  mobile_scanner: ^7.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/wk_app_icon.png"
+  adaptive_icon_background: "#020712"
+  adaptive_icon_foreground: "assets/images/wk_app_icon.png"
