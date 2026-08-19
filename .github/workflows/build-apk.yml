@@ -28,6 +28,11 @@ jobs:
           cache: true
       - name: Generate Android project
         run: flutter create . --platforms=android --org com.grupowk --project-name wk_operacoes
+      - name: Set WK Frentista display name
+        run: |
+          sed -i 's/android:label="wk_operacoes"/android:label="WK Frentista"/' android/app/src/main/AndroidManifest.xml
+          sed -i 's/WK Operações/WK Frentista/g' lib/main.dart
+          sed -i 's/WK Cliente/Grupo WK/g' lib/main.dart
       - name: Get dependencies
         run: flutter pub get
       - name: Reuse official WK launcher icon
@@ -45,7 +50,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: wk-operacoes-debug-apk
+          name: wk-frentista-debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
           if-no-files-found: error
           retention-days: 30
