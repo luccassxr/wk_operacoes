@@ -371,7 +371,7 @@ class _FuelingScreenState extends State<FuelingScreen> {
             onChanged: (value) => setState(() => fuel = value ?? fuel),
           ),
           const SizedBox(height: 12),
-          TextField(controller: amount, keyboardType: const TextInputType.numberWithOptions(decimal: true), decoration: const InputDecoration(labelText: 'Valor do abastecimento (R$)', prefixText: 'R$ ')),
+          TextField(controller: amount, keyboardType: const TextInputType.numberWithOptions(decimal: true), decoration: const InputDecoration(labelText: 'Valor do abastecimento (R\$)', prefixText: 'R\$ ')),
           const SizedBox(height: 12),
           TextField(controller: liters, keyboardType: const TextInputType.numberWithOptions(decimal: true), decoration: const InputDecoration(labelText: 'Litros (opcional)')),
           if (error != null) ...[
